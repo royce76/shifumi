@@ -28,6 +28,7 @@ var i=Math.random();
 console.log(i);
 
 //computer choose stone for i<0.33
+var computerChoice ="";
 if(i<=0.33){
     alert("Computer choose "+ weapon[0] + "\n press ok to continue");
     console.log(weapon[0]);
@@ -42,3 +43,6 @@ else{
     alert("Computer choose "+ weapon[2]+ "\n press ok to continue");
     console.log(weapon[2]);
 }
+
+//display user choice and computer choice
+
