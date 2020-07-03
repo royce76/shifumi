@@ -66,3 +66,25 @@ else{
 alert("Computer has chosen "+computerChoice+".\n"+userName+" has chosen "+choiceUser+".\n press ok to continue");
 
 //define winner
+
+if(weaponUser===computerChoice){
+    alert("DRAW");
+}
+else if(weaponUser===weapon[0] && computerChoice===weapon[1]){
+    alert("Computer win. ");
+}
+else if(weaponUser===weapon[0] && computerChoice===weapon[2]){
+    alert(userName+" win. ");
+}
+else if(weaponUser===weapon[1] && computerChoice===weapon[0]){
+    alert(userName+ " win.");
+}
+else if(weaponUser===weapon[1] && computerChoice===weapon[2]){
+    alert("Computer win. ");
+}
+else if(weaponUser===weapon[2] && computerChoice===weapon[0]){
+    alert("Computer win. ");
+}
+else if(weaponUser===weapon[2] && computerChoice===weapon[1]){
+    alert(userName+" win. ");
+}
