@@ -13,11 +13,14 @@ var weapon=[
     "scissors"
 ];
 
+//do{
+
 var choiceUser=prompt( "Please choose and enter name's weapon among this list : "
                         +weapon +".\n and press ok to continue"
                     );
 console.log(choiceUser);
 var weaponUser="";
+
 if(choiceUser==="stone"){
     weaponUser=weapon[0];
     console.log(weaponUser);
@@ -30,11 +33,21 @@ else if (choiceUser==="scissors"){
     weaponUser=weapon[2];
     console.log(weaponUser);
 }
+else if (choiceUser!="stone" || choiceUser!="leaf" || choiceUser!="scissors" ){
+    prompt( "Please choose and enter name's weapon among this list : "
+                        +weapon +".\n and press ok to continue"
+                    );
+console.log(choiceUser);
+}
+//}
+//while(choiceUser!="stone" || choiceUser!="leaf" || choiceUser!="scissors");
+
+
 
 //variable choiceUser store weapon's choice.
 
 //show user choice
-alert("You choose "+choiceUser+"\n press ok to continue");
+//alert("You choose "+weaponUser+"\n press ok to continue");
 
 //generate a choice for computer
 //variable i has a random value
@@ -63,7 +76,7 @@ else{
 //var computerChoice is define inside the condition to store the weapon value
 //display user choice and computer choice
 
-alert("Computer has chosen "+computerChoice+".\n"+userName+" has chosen "+choiceUser+".\n press ok to continue");
+alert("Computer has chosen "+computerChoice+".\n"+userName+" has chosen "+weaponUser+".\n press ok to continue");
 
 //define winner
 
