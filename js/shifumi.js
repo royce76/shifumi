@@ -17,6 +17,20 @@ var choiceUser=prompt( "Please choose and enter name's weapon among this list : 
                         +weapon +".\n and press ok to continue"
                     );
 console.log(choiceUser);
+var weaponUser="";
+if(choiceUser==="stone"){
+    weaponUser=weapon[0];
+    console.log(weaponUser);
+}
+else if (choiceUser==="leaf"){
+    weaponUser=weapon[1];
+    console.log(weaponUser);
+}
+else if (choiceUser==="scissors"){
+    weaponUser=weapon[2];
+    console.log(weaponUser);
+}
+
 //variable choiceUser store weapon's choice.
 
 //show user choice
@@ -50,3 +64,5 @@ else{
 //display user choice and computer choice
 
 alert("Computer has chosen "+computerChoice+".\n"+userName+" has chosen "+choiceUser+".\n press ok to continue");
+
+//define winner
