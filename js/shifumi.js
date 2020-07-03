@@ -13,13 +13,13 @@ var weapon=[
     "scissors"
 ];
 
-//do{
+do{
     var choiceUser=prompt( "Please choose and enter name's weapon among this list : " +weapon +".\n and press ok to continue");
 console.log(choiceUser);
-/*}
+}
 
-while (choiceUser!="stone" || choiceUser!="leaf" || choiceUser!="scissors" );
-*/
+while (choiceUser!="stone" && choiceUser!="leaf" && choiceUser!="scissors" );
+
 var weaponUser="";
 
 if(choiceUser==="stone"){
