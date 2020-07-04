@@ -54,7 +54,6 @@ else if(choiceUser === weapon[2] && computerChoice === weapon[1]){
 else{
      alert("Computer win");
 }
-
 /*
 if(pointuser === 3){
                     alert(userName + " win the set.");
