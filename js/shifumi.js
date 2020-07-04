@@ -8,34 +8,37 @@ while(userName.length > 20 || userName.length < 2);
 var weapon = ["roc", "paper", "scissors"];//add weapon's user
 
 do{
-    var choiceUser = prompt( 
+    var choiceUser = prompt(
                         "Please choose and enter name's weapon among this list :\n" //variable choiceUser store weapon's choice.
                         + weapon[0] + "\n" + weapon[1] + "\n" + weapon[2] + 
                         ".\nand press ok to continue"
                     );
+                    choiceUser = choiceUser.toLowerCase();
 }
-while (choiceUser != "roc" && choiceUser != "paper" && choiceUser != "scissors" );
+while (
+       choiceUser != "roc" && choiceUser != "paper" && choiceUser != "scissors"  
+);
 
-var i = Math.random();//generate a choice for computer
+var i = Math.random();//generate a choice for computerS
 
 var computerChoice = "";//var computerChoice store the weapon value
 
 if(i <= 0.33){
-            alert("Computer choose "+ weapon[0] + "\npress ok to continue");//computer choose stone for i<0.33
-            computerChoice = weapon[0];
+              alert("Computer choose "+ weapon[0] + "\npress ok to continue");//computer choose stone for i<0.33
+              computerChoice = weapon[0];
 }
 else if (i <= 0.66){
-                alert("Computer choose "+ weapon[1] + "\npress ok to continue");//computer choose leaf for i<0.66
-                computerChoice = weapon[1];
+                    alert("Computer choose "+ weapon[1] + "\npress ok to continue");//computer choose leaf for i<0.66
+                    computerChoice = weapon[1];
 }
 else{
-    alert("Computer choose "+ weapon[2]+ "\npress ok to continue");//else computer choose scissors
-    computerChoice = weapon[2];
+     alert("Computer choose "+ weapon[2]+ "\npress ok to continue");//else computer choose scissors
+     computerChoice = weapon[2];
 }
 
 alert("Computer has chosen "+ computerChoice + ".\n" + userName + " has chosen " + choiceUser + ".\npress ok to continue");//display user choice and computer choice
 
-//define winner
+//determinate winner
 /*var pointComputer = 0;
 var pointUser = 0 ;*/
 
@@ -54,6 +57,7 @@ else if(choiceUser === weapon[2] && computerChoice === weapon[1]){
 else{
      alert("Computer win");
 }
+
 /*
 if(pointuser === 3){
                     alert(userName + " win the set.");
