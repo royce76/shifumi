@@ -1,90 +1,63 @@
-// Display "Welcome " to user
-alert("Welcome to Advanced SHIFUMI :\npress ok to continue");
+alert("Welcome to Advanced SHIFUMI :\npress ok to continue");// Display "Welcome " to user
 
-//User add his name
-var userName=prompt("Please enter your name\nand press ok to continue");
-console.log(userName);
-//variable userName store user name.
+do{
+var userName = prompt("Please enter your name\nand press ok to continue");//variable userName store user name.
+}
+while(userName.length > 20 || userName.length < 2);
 
-//add weapon's user
-var weapon=[
-    "stone",
-    "leaf",
-    "scissors"
-];
+var weapon = ["roc", "paper", "scissors"];//add weapon's user
 
-var choiceUser=prompt( "Please choose and enter name's weapon among this list : "
-                        +weapon +".\n and press ok to continue"
+do{
+    var choiceUser = prompt( 
+                        "Please choose and enter name's weapon among this list :\n" //variable choiceUser store weapon's choice.
+                        + weapon[0] + "\n" + weapon[1] + "\n" + weapon[2] + 
+                        ".\nand press ok to continue"
                     );
-console.log(choiceUser);
-var weaponUser="";
-if(choiceUser==="stone"){
-    weaponUser=weapon[0];
-    console.log(weaponUser);
 }
-else if (choiceUser==="leaf"){
-    weaponUser=weapon[1];
-    console.log(weaponUser);
-}
-else if (choiceUser==="scissors"){
-    weaponUser=weapon[2];
-    console.log(weaponUser);
-}
+while (choiceUser != "roc" && choiceUser != "paper" && choiceUser != "scissors" );
 
-//variable choiceUser store weapon's choice.
+var i = Math.random();//generate a choice for computer
 
-//show user choice
-alert("You choose "+choiceUser+"\n press ok to continue");
+var computerChoice = "";//var computerChoice store the weapon value
 
-//generate a choice for computer
-//variable i has a random value
-var i=Math.random();
-console.log(i);
-
-//computer choose stone for i<0.33
-var computerChoice="";
-if(i<=0.33){
-    alert("Computer choose "+ weapon[0] + "\n press ok to continue");
-    computerChoice=weapon[0];
-    console.log(weapon[0]);
+if(i <= 0.33){
+            alert("Computer choose "+ weapon[0] + "\npress ok to continue");//computer choose stone for i<0.33
+            computerChoice = weapon[0];
 }
-//computer choose leaf for i<0.66
-else if (i<=0.66){
-    alert("Computer choose "+ weapon[1] + "\n press ok to continue");
-    computerChoice=weapon[1];
-    console.log(weapon[1]);
+else if (i <= 0.66){
+                alert("Computer choose "+ weapon[1] + "\npress ok to continue");//computer choose leaf for i<0.66
+                computerChoice = weapon[1];
 }
-//else computer choose scissors 
 else{
-    alert("Computer choose "+ weapon[2]+ "\n press ok to continue");
-    computerChoice=weapon[2];
-    console.log(weapon[2]);
+    alert("Computer choose "+ weapon[2]+ "\npress ok to continue");//else computer choose scissors
+    computerChoice = weapon[2];
 }
-//var computerChoice is define inside the condition to store the weapon value
-//display user choice and computer choice
 
-alert("Computer has chosen "+computerChoice+".\n"+userName+" has chosen "+choiceUser+".\n press ok to continue");
+alert("Computer has chosen "+ computerChoice + ".\n" + userName + " has chosen " + choiceUser + ".\npress ok to continue");//display user choice and computer choice
 
 //define winner
+/*var pointComputer = 0;
+var pointUser = 0 ;*/
 
-if(weaponUser===computerChoice){
-    alert("DRAW");
+if(choiceUser === computerChoice){
+                                  alert("DRAW");
 }
-else if(weaponUser===weapon[0] && computerChoice===weapon[1]){
-    alert("Computer win. ");
+else if(choiceUser === weapon[0] && computerChoice === weapon[2]){
+                                                                  alert(userName + " win. ");
 }
-else if(weaponUser===weapon[0] && computerChoice===weapon[2]){
-    alert(userName+" win. ");
+else if(choiceUser === weapon[1] && computerChoice === weapon[0]){
+                                                                  alert(userName + " win. ");
 }
-else if(weaponUser===weapon[1] && computerChoice===weapon[0]){
-    alert(userName+ " win.");
+else if(choiceUser === weapon[2] && computerChoice === weapon[1]){
+                                                                  alert(userName + " win. ");
 }
-else if(weaponUser===weapon[1] && computerChoice===weapon[2]){
-    alert("Computer win. ");
+else{
+     alert("Computer win");
 }
-else if(weaponUser===weapon[2] && computerChoice===weapon[0]){
-    alert("Computer win. ");
-}
-else if(weaponUser===weapon[2] && computerChoice===weapon[1]){
-    alert(userName+" win. ");
-}
+/*
+if(pointuser === 3){
+                    alert(userName + " win the set.");
+}*/
+/*else{
+    alert("computer win the set");
+}*/
