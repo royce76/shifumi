@@ -5,6 +5,10 @@ var userName = prompt("Please enter your name\nand press ok to continue");//vari
 }
 while(userName.length > 20 || userName.length < 2);
 
+var pointComputer = 0;
+var pointUser = 0 ;
+
+while(pointComputer < 3 && pointUser < 3){
 var weapon = ["roc", "paper", "scissors"];//add weapon's user
 
 do{
@@ -39,29 +43,22 @@ else{
 alert("Computer has chosen "+ computerChoice + ".\n" + userName + " has chosen " + choiceUser + ".\npress ok to continue");//display user choice and computer choice
 
 //determinate winner
-/*var pointComputer = 0;
-var pointUser = 0 ;*/
+
 
 if(choiceUser === computerChoice){
-                                  alert("DRAW");
+                                 var y = alert("DRAW");
 }
-else if(choiceUser === weapon[0] && computerChoice === weapon[2]){
-                                                                  alert(userName + " win. ");
-}
-else if(choiceUser === weapon[1] && computerChoice === weapon[0]){
-                                                                  alert(userName + " win. ");
-}
-else if(choiceUser === weapon[2] && computerChoice === weapon[1]){
-                                                                  alert(userName + " win. ");
+else if((choiceUser === weapon[0] && computerChoice === weapon[2]) ||
+        (choiceUser === weapon[1] && computerChoice === weapon[0]) ||
+        (choiceUser === weapon[2] && computerChoice === weapon[1])
+       ){
+         alert(userName + " win. ");
+         pointUser ++;
 }
 else{
      alert("Computer win");
+     pointComputer ++;
 }
 
-/*
-if(pointuser === 3){
-                    alert(userName + " win the set.");
-}*/
-/*else{
-    alert("computer win the set");
-}*/
+}
+
