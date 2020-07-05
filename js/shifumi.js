@@ -4,11 +4,12 @@ do{
 var userName = prompt("Please enter your name\nand press ok to continue");//variable userName store user name.
 }
 while(userName.length > 20 || userName.length < 2);
-
+do{
 var pointComputer = 0;
 var pointUser = 0 ;
 
 while(pointComputer < 3 && pointUser < 3){
+    
 var weapon = ["roc", "paper", "scissors"];//add weapon's user
 
 do{
@@ -59,6 +60,21 @@ else{
      alert("Computer win");
      pointComputer ++;
 }
+}
+if(pointUser === 3){
+    alert(userName + " win the set.");
+}
+else{
+alert("Computer win the set");
+}
+do{
+var anwserUser = prompt('Do you want to play an another set ?\nAnswer "yes" to continue \n"no" to stop');
+    anwserUser = anwserUser.toLocaleLowerCase();
+}
+while(anwserUser != "no" && anwserUser != "yes");
 
 }
-
+while( anwserUser === "yes");
+if(anwserUser === "no"){
+    alert(" Thank you for playing my game");
+}
